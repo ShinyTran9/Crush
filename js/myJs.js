@@ -1,16 +1,16 @@
 const textConfig = {
-  text1: "He luu cậu!",
-  text2: "Tớ có điều này muốn hỏi cậu nhớ phải trả lời thật lòng nhaaa.",
-  text3: "Cậu yêu tớ có phải không nào ._.",
-  text4: "Nếu cậu ko trả lời mà thoát ra tức là muốn làm vợ tớ rùi đó nha :v",
-  text5: "Cậu mơ à???",
-  text6: "Yêu ơi là yêu <3",
-  text7: "lí do cậu thích tớ đi :vvvv",
-  text8: "Gửi cho tớ <3",
-  text9: "Vì cậu đẹp try vlllll",
-  text10: "Tớ biết mà ^^ Yêu cậu 300.000",
+  text1: "He luu Dương!!",
+  text2: "Tui có điều này muốn hỏi Dương mà nhớ phải trả lời thật lòng nhaaa.",
+  text3: "Bữa giờ không thấy tui online Dương có nhớ tui hông?? ._.",
+  text4: "Nếu Dương ko trả lời mà thoát ra tức là nghiện mà còn ngại haahaahaaa :v",
+  text5: "Ông mơ à???",
+  text6: "Nhớ ơi là nhớ luôn <3",
+  text7: "Hôhohoooo, Thiệt hảaaaaa :vvvv",
+  text8: "Gửi cho tui liền haaaa <3",
+  text9: "Vì ông đẹp trai ahihihihihihihhihihihihihihihihihihihihihihihi.................dễ thương nữa...l",
+  text10: "Tui biết mà ^^ để tui tải game lại chơi với bà nha :))",
   text11:
-    "Tối nay tớ qua đón cậu đi chơi nhaa :v Còn giờ thì chờ gì nữa mà ko inbox cho tớ đi nàooo",
+    "Tối nay tui lấy xe chở bà đi hết cái map Sanhok oke hông :v Còn giờ thì chờ gì nữa mà ko inbox cho tui đi nàooo",
   text12: "Okii lunn <3",
 };
 
@@ -114,7 +114,7 @@ $(document).ready(function () {
       html: true,
       width: 900,
       padding: "3em",
-      html: "<input type='text' class='form-control' id='txtReason'  placeholder='Whyyy'>",
+      html: "<input type='text' class='form-control' id='txtReason'  placeholder='Whyyyyyyyyyyyyy'>",
       background: '#fff url("img/iput-bg.jpg")',
       backdrop: `
                     rgba(0,0,123,0.4)
@@ -138,7 +138,7 @@ $(document).ready(function () {
           text: textConfig.text11,
           confirmButtonColor: "#83d0c9",
           onClose: () => {
-            window.location = "http://fb.com";
+            window.location = "https://www.facebook.com/messages/t/100041404263636";
           },
         });
       }
