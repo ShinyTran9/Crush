@@ -1,7 +1,7 @@
 const textConfig = {
   text1: "He luu Dương!!",
   text2: "Tui có điều này muốn hỏi Dương mà nhớ phải trả lời thật lòng nhaaa.",
-  text3: "Bữa giờ không thấy tui online Dương có nhớ tui hông?? ._.",
+  text3: "Bữa giờ không thấy tui online Dương có nhớ tui            ^..^",
   text4: "Nếu Dương ko trả lời mà thoát ra tức là nghiện mà còn ngại haahaahaaa :v",
   text5: "Ông mơ à???",
   text6: "Nhớ ơi là nhớ luôn <3",
@@ -12,6 +12,11 @@ const textConfig = {
   text11:
     "Tối nay tui lấy xe chở bà đi hết cái map Sanhok oke hông :v Còn giờ thì chờ gì nữa mà ko inbox cho tui đi nàooo",
   text12: "Okii lunn <3",
+  text13: "Thiệt là hông nhóooooo luônnnn :(",
+  text14: "Trời đất ơiiiiii !!",
+  text15: "Ohmmm, không nhớ :)",
+  text16: "Biết thế méo hỏi, huhuhu..T.T",
+  text17: "Bo Xì :)",
 };
 
 $(document).ready(function () {
@@ -153,4 +158,76 @@ $(document).ready(function () {
       });
     });
   });
+});
+$(document).ready(function () {  
+  // generate text in input
+  function textGenerate() {
+    var n = "";
+    var text = " " + textConfig.text15;
+    var a = Array.from(text);
+    var textVal = $("#txtRe").val() ? $("#txtRe").val() : "";
+    var count = textVal.length;
+    if (count > 0) {
+      for (let i = 1; i <= count; i++) {
+        n = n + a[i];
+        if (i == text.length + 1) {
+          $("#txtRe").val("");
+          n = "";
+          break;
+        }
+      }
+    }  
+ 
+   $("#txtRe").val(n);
+  }
+ // show popup
+ $("#kk").click(function () {
+  var audio = new Audio("sound/het.mp3");
+  audio.play();
+  Swal.fire({
+    title: textConfig.text14,
+    html: true,
+    width: 900,
+    padding: "3em",
+    html: "<input type='text' class='form-control' id='txtRe'  placeholder='Không nhớ chút nào luônnn :(('>",
+    background: '#fff url("img/input-bg.jpg")',
+    backdrop: `
+                  rgba(0,0,456,0.4)
+                  url("img/khoc.gif")
+                  left top 
+                  no-repeat
+                `,
+    showCancelButton: false,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonColor: "#fe8a71",
+    cancelButtonColor: "#f6cd61",
+    confirmButtonText: textConfig.text13,
+  }).then((result) => {
+    if (result.value) {
+      Swal.fire({
+        width: 900,
+        confirmButtonText: textConfig.text17,
+        background: '#fff url("img/iput-bg.jpg")',
+        imageUrl: "img/meokhoc.jpg",
+        imageWidth: 500,
+        imageHeight: 500,
+        text: textConfig.text16,
+        confirmButtonColor: "#83d0c9",
+        onClose: () => {
+          window.location = "https://www.youtube.com/watch?v=W8iBszF6E5g";
+        },
+      });
+    }
+  });
+
+  $("#txtRe").focus(function () {
+    var handleWriteText = setInterval(function () {
+      textGenerate();
+    }, 10);
+    $("#txtRe").blur(function () {
+      clearInterval(handleWriteText);
+    });
+  });
+});
 });

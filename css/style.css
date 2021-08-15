@@ -17,7 +17,7 @@
     -webkit-transition: all 0.3s ease-out;
   }
 #bg{
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
@@ -31,8 +31,20 @@
   background-position: 50%;
   -webkit-filter: blur(4px);
 }
+#kk{
+  position: fixed;
+  top: 100px;
+  right: 160px;
+  font-family: 'Pacifico';
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: cubic-bezier();
+}
+
 .swal2-title, .swal2-content{
-  color: azure !important;
+  color: rgb(32, 197, 32) !important;
 }
 .swal2-popup {
   border-radius: 15px !important;
@@ -78,5 +90,5 @@ header h4 {
     font-size: 14px;
     padding: 3px;
     -webkit-transition: all 0.3s ease-out;
-  }
+  }  
 }
